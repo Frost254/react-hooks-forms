@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Form() {
-  const [firstName, setFirstName] = useState("John");
-  const [lastName, setLastName] = useState("Henry");
+function Form({
+    firstName,
+    secondName,
+    handleFirstName,
+    handleSecondName,
+}) {
 
-  return (
-    <form>
-      <input type="text" value={firstName} />
-      <input type="text" value={lastName} />
-      <button type="submit">Submit</button>
-    </form>
-  );
+    return ( <
+        form >
+        <
+        input type = "text"
+        onChange = { handleFirstName }
+        value = { firstName }
+        /> <
+        input type = "text"
+        onChange = { handleSecondName }
+        value = { secondName }
+        /> <
+        button type = "submit" > Submit < /button> <
+        /form>
+    );
 }
 
 export default Form;
